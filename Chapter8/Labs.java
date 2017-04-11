@@ -1,21 +1,21 @@
 import java.util.Scanner;
 public class Labs
 {
-    
-    public static int Digit()
+    int num=50, rem=0;
+    public static int Digit(int num, int rem)
     {
-        System.out.println("Digit counter.");
-        System.out.println();
-        int num=50,rem=0;
+        //System.out.println("Digit counter.");
+        //System.out.println();
         if(num>10)
         {
-            rem=num/10;
+            rem=/10;
             num++;
         }
         else
             return num;
+        return num;
     }
-    
+    /**
     public static String palindrome()
     {
         Scanner keyboard = new Scanner(System.in);

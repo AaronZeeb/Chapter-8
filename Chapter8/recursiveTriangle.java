@@ -45,8 +45,8 @@ public class recursiveTriangle extends JApplet
     {
         //Find the distance between 2 points ex. - x,y & x1,y1
 
-        double distance=(Math.sqrt(Math.pow(xPos[1]-xPos[2]))+(Math.pow(yPos[1]-yPos[2])));
-        if (distance >500 )
+        double distance=(Math.sqrt(Math.pow(xPos[1]-xPos[2],2))+(Math.pow(yPos[1]-yPos[2],2)));
+        if (distance >1000 )
         {
             
             //find the mid points of each line segment
@@ -57,20 +57,20 @@ public class recursiveTriangle extends JApplet
         
             int ABMidx=(xPos[0]+xPos[1])/2;
             int BCMidx=(xPos[1]+xPos[2])/2;
-            int CAMidx=(xPos[3]+xPos[4])/2;
+            int CAMidx=(xPos[2]+xPos[3])/2;
             //int ABMidx=(xPos[4]+xPos[5])/2;
             
             int ABMidy=(yPos[0]+yPos[1])/2;
             int BCMidy=(yPos[1]+yPos[2])/2;
-            int CAMidy=(yPos[3]+yPos[4])/2;
+            int CAMidy=(yPos[2]+yPos[3])/2;
             //int ABMidy=(yPos[4]+yPos[5])/2;            
             
             
-            int [] xMid={ABMidx, BCMidx, CAMidx, ABMidx}; 
-            int [] yMid={ABMidy, BCMidy, CAMidy, ABMidy};
+            int[] xMid={ABMidx, BCMidx, CAMidx, ABMidx}; 
+            int[] yMid={ABMidy, BCMidy, CAMidy, ABMidy};
             //draw the Triangle
 
-            page.setColor (Color.red);
+            page.setColor (Color.black);
             page.drawPolyline (xMid, yMid, xMid.length);
 
             Triangle(xMid,yMid,page);        
@@ -83,6 +83,10 @@ public class recursiveTriangle extends JApplet
 
             // Three recursive calls for each section of triangle
             //example
+			if(distance>100)
+			{
+				
+			}
         }
 
     }//end of Triangle

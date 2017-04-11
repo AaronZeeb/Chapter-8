@@ -1,5 +1,4 @@
 #BlueJ class context
 comment0.params=
-comment0.target=java.lang.String\ palindrome()
-comment0.text=\r\n\ \ \ \ public\ static\ int\ Digit()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ System.out.println("Digit\ counter.");\r\n\ \ \ \ \ \ \ \ System.out.println();\r\n\ \ \ \ \ \ \ \ int\ num\=50,rem\=0;\r\n\ \ \ \ \ \ \ \ if(num>10)\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ rem\=num/10;\r\n\ \ \ \ \ \ \ \ \ \ \ \ num++;\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ \ \ \ \ return\ num;\r\n\ \ \ \ }\r\n
+comment0.target=int\ Digit()
 numComments=1

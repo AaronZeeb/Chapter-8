@@ -29,7 +29,7 @@ public class Bullseye extends Applet
       x+=radius/5;
       y+=radius/5;
       
-      if (radius>25)
+      if (radius>100)
       {
         //drawCircle(x,y,radius,page);
         if(x%2==0)
