@@ -46,7 +46,7 @@ public class recursiveTriangle extends JApplet
         //Find the distance between 2 points ex. - x,y & x1,y1
 
         double distance=(Math.sqrt(Math.pow(xPos[1]-xPos[2],2))+(Math.pow(yPos[1]-yPos[2],2)));
-        if (distance >1000 )
+        if (distance >10)
         {
             
             //find the mid points of each line segment
@@ -78,15 +78,15 @@ public class recursiveTriangle extends JApplet
             //create 3 x,y Array using the midpoints you calculated
             //example
             //int[] ATrix = {xPos[0],Segment1Midx,Segment2Midx, xPos[0]};
+            
+            page.setColor (Color.black);
+            page.drawPolyline (xMid, yMid, xMid.length);
 
+            Triangle(xMid,yMid,page);  
 
 
             // Three recursive calls for each section of triangle
             //example
-			if(distance>100)
-			{
-				
-			}
         }
 
     }//end of Triangle
