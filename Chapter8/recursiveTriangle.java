@@ -44,65 +44,50 @@ public class recursiveTriangle extends JApplet
     public void Triangle(int[] xPos, int[] yPos, Graphics page)
     {
         //Find the distance between 2 points ex. - x,y & x1,y1
-
         double distance=(Math.sqrt(Math.pow(xPos[1]-xPos[2],2))+(Math.pow(yPos[1]-yPos[2],2)));
-        if (distance >1000)
+        if (distance >10)
         {
-            
             //find the mid points of each line segment
             
-
             //make the x and y array (3 points + first point to finish triangle)
             //{ABMidx, BCMidx, CAMidx, ABMidx};
         
             int ABMidx=(xPos[0]+xPos[1])/2;
             int BCMidx=(xPos[1]+xPos[2])/2;
             int CAMidx=(xPos[2]+xPos[3])/2;
-            //int ABMidx=(xPos[4]+xPos[5])/2;
             
             int ABMidy=(yPos[0]+yPos[1])/2;
             int BCMidy=(yPos[1]+yPos[2])/2;
             int CAMidy=(yPos[2]+yPos[3])/2;
-            //int ABMidy=(yPos[4]+yPos[5])/2;            
             
+            //int[] xMid={ABMidx, BCMidx, CAMidx, ABMidx}; 
+            //int[] yMid={ABMidy, BCMidy, CAMidy, ABMidy};            
             
-            int[] xMid={ABMidx, BCMidx, CAMidx, ABMidx}; 
-            int[] yMid={ABMidy, BCMidy, CAMidy, ABMidy};
-            //draw the Triangle
-
-            page.setColor (Color.black);
-            page.drawPolyline (xMid, yMid, xMid.length);
-
-            Triangle(xMid,yMid,page);        
+            //draw the Triangle        
 
             //create 3 x,y Array using the midpoints you calculated
             //example
             //int[] ATrix = {xPos[0],Segment1Midx,Segment2Midx, xPos[0]};
             
+            int[] xMid={xPos[0], BCMidx, CAMidx, xPos[0]}; 
+            int[] yMid={yPos[0], BCMidy, CAMidy, yPos[0]};
+            
+            int[] xMid2={ABMidx, xPos[1], CAMidx, ABMidx}; 
+            int[] yMid2={ABMidy, yPos[1], CAMidy, ABMidy};
+            
+            int[] xMid3={ABMidx, BCMidx, xPos[2], ABMidx}; 
+            int[] yMid3={ABMidy, BCMidy, yPos[2], ABMidy};
+            
+            
             page.setColor (Color.black);
             page.drawPolyline (xMid, yMid, xMid.length);
-
-            Triangle(xMid,yMid,page);  
-
+            page.drawPolyline (xMid2, yMid2, xMid2.length);
+            page.drawPolyline (xMid3, yMid3, xMid3.length);
 
             // Three recursive calls for each section of triangle
-            //example
-            if(distance>10)
-            {
-                ABMidx=(xPos[0]+xPos[1])/2;
-                BCMidx=(xPos[1]+xPos[2])/2;
-                CAMidx=(xPos[2]+xPos[3])/2;
-                           
-                ABMidy=(yPos[0]+yPos[1])/2;
-                BCMidy=(yPos[1]+yPos[2])/2;
-                CAMidy=(yPos[2]+yPos[3])/2;
-                
-                int[] newxMid={ABMidx, BCMidx, CAMidx, ABMidx}; 
-                int[] newyMid={ABMidy, BCMidy, CAMidy, ABMidy};                
-                page.setColor(Color.red);
-                page.drawPolyline (newxMid, newyMid, newxMid.length);
-                Triangle(newxMid,newyMid,page);            
-            }
+            Triangle(xMid,yMid,page);  
+            Triangle(xMid2,yMid2,page);
+            Triangle(xMid3,yMid3,page);
         }
 
     }//end of Triangle
