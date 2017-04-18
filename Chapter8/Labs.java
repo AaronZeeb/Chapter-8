@@ -1,19 +1,20 @@
 import java.util.Scanner;
 public class Labs
 {
-    int num=50, rem=0;
-    public static int Digit(int num, int rem)
+    public static int Digit(int num)
     {
         //System.out.println("Digit counter.");
         //System.out.println();
-        if(num>10)
+        int count=0;
+        if(num<10)
         {
-            rem=/10;
-            num++;
+            return 1+count;            
         }
         else
-            return num;
-        return num;
+        {
+            count++;
+            return Digit(num)/10;
+        }
     }
     /**
     public static String palindrome()
@@ -31,7 +32,7 @@ public class Labs
         right=
         if(left==right)
         {
-            if(post<=(line.length()-1))
+            if(pos<=(line.length()-1))
             {
             
             }
