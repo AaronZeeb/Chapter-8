@@ -1,10 +1,11 @@
 import java.util.Scanner;
 public class Labs
 {
+    static int total=0;
+	static int count;
+    /*
     public static int Digit(int num)
     {
-        //System.out.println("Digit counter.");
-        //System.out.println();
         int count=0;
         if(num<10)
         {
@@ -13,63 +14,52 @@ public class Labs
         else
         {
             count++;
-            return Digit(num)/10;
+            return count+Digit(num/10);
         }
     }
-    /**
-    public static String palindrome()
-    {
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println();
-        System.out.println("Palendrome tester.");
-        System.out.println();
-        System.out.println("Enter a sentence:");
-        String line=keyboard.nextLine();
-        int left=0, right=line.length()-1;
-        int pos=0;
-        left=,right=
-        left=
-        right=
-        if(left==right)
-        {
-            if(pos<=(line.length()-1))
-            {
-            
-            }
-        }
-        while(line.charAt(left)==line.charAt(right)&& left<right)
-        {
-            left++;
-            right--;        
-         }
-        System.out.println();
-       
-        if(left<right)
-        {
-            String command="This is not a palindrome";
-            return line;
-         }
-        else
-        {
-            String an="This is a palindrome";
-            return an;
-            }
-    }
-    /*
-    public static double GCD()
-    {
-        System.out.println();
-        System.out.println("GCD finder.");
-        System.out.println();
-        
-    }
-    
-    public static int Fund()
-    {
-        System.out.println();
-        System.out.println("Fund raising counter.");
-        System.out.println();
-        
-    }  
     */
+    
+	/*
+    public static int GCD(int num1, int num2)
+    {
+
+		if(num2<=num1 && num2%num1==0)
+			return num2;
+
+		if (num2==0)
+			return num1;
+		else
+		{
+			return GCD(num2, num1%num2);
+		}
+	
+    }
+    */
+    public static int Fund()
+    {   
+		/*
+		count=0;
+        if(count>=10)
+            return count+Fund();
+        else
+		{
+			//count++;
+            return Fund(count+1);	
+		}
+		
+		if(count>=10)
+			return 1+Fund(count);
+		else
+		{
+			count++;
+			return Fund(1+count);
+		}
+		*/
+		if(count>=100)
+			return count+Fund(total);
+		else
+			count++;
+			return Fund(total+count);
+    }
+	
 }
