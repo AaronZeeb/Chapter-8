@@ -28,3 +28,12 @@ public class Palindrome
         return false;
     }
 }
+/**
+ * Enter a word:
+ * Aaron Zeeb
+ * Aaron Zeeb is not a palindrome
+ * 
+ * Enter a word:
+ * dogeeseseegod
+ * dogeeseseegod is a palindrome
+ */

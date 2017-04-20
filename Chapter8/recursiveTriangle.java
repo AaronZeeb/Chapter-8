@@ -59,7 +59,7 @@ public class recursiveTriangle extends JApplet
             int ABMidy=(yPos[0]+yPos[1])/2;
             int BCMidy=(yPos[1]+yPos[2])/2;
             int CAMidy=(yPos[2]+yPos[3])/2;
-            
+                       
             //int[] xMid={ABMidx, BCMidx, CAMidx, ABMidx}; 
             //int[] yMid={ABMidy, BCMidy, CAMidy, ABMidy};            
             
@@ -84,7 +84,7 @@ public class recursiveTriangle extends JApplet
             page.drawPolyline (xMid2, yMid2, xMid2.length);
             page.drawPolyline (xMid3, yMid3, xMid3.length);
 
-            // Three recursive calls for each section of triangle
+            //Three recursive calls for each section of triangle
             Triangle(xMid,yMid,page);  
             Triangle(xMid2,yMid2,page);
             Triangle(xMid3,yMid3,page);
