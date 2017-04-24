@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Labs
 {
     static int total=0;
-    static int count;
+    static int count=0;
     /**
     public static int Digit(int num)
     {
@@ -58,11 +58,11 @@ public class Labs
         }
         */
         if(count<100)
-            return count+Fund(total);
+            return Fund(total);
         else
         {
             count++;
-            return count+Fund(total);
+            return Fund(total+1);
         }
     }
     
